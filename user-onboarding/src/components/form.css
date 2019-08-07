@@ -12,19 +12,47 @@ body {
 }
 
 .username-field {
-    border: 1px solid white;
+    border: 1px solid white !important;
+    display: flex !important;
+    flex-flow: column nowrap !important;
+    width: 80% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
 }
 
 .email-field {
-    display: flex;
-    flex-flow: column nowrap;
+    border: 1px solid white !important;
+    display: flex !important;
+    flex-flow: column nowrap !important;
+    width: 80% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
 }
 
 .password-field {
-    display: flex;
-    flex-flow: column nowrap;
+    border: 1px solid white !important;
+    display: flex !important;
+    flex-flow: column nowrap !important;
+    width: 80% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.role-field {
+    margin-right: 2rem;
+    /* display: flex !important;
+    flex-flow: column nowrap !important;
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important; */
 }
 
 .terms-field {
-    color: tan;
+    margin: 2rem;
+    /* color: tan;
+    display: flex !important;
+    flex-flow: column wrap !important;
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important; */
 }
