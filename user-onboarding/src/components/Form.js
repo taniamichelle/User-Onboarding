@@ -11,9 +11,9 @@ import './form.css';
 const UserForm = ({ errors, touched, values }) => {
     return (
         <div className='user-form'>
-            <h2>User Info</h2>
             <Form>
                 <Field
+                    className='username-field'
                     type='text'
                     name='username'
                     placeholder='username'
@@ -22,13 +22,35 @@ const UserForm = ({ errors, touched, values }) => {
                     variant="outlined"
                 />
                 {touched.username && errors.username && <p className='username'>{errors.username}</p>}
-                <Field type='text' name='email' placeholder='email' component={TextField} />
+                <Field
+                    className='email-field'
+                    type='text'
+                    name='email'
+                    placeholder='email'
+                    component={TextField}
+                    margin="normal"
+                    variant="outlined"
+                />
                 {touched.email && errors.email && <p className='error'>{errors.email}</p>}
-                <Field type='text' name='password' placeholder='password' component={TextField} />
+                <Field
+                    className='password-field'
+                    type='text'
+                    name='password'
+                    placeholder='password'
+                    component={TextField}
+                    margin="normal"
+                    variant="outlined"
+                />
                 {touched.password && errors.password && <p className='error'>{errors.password}</p>}
+                <Field component='select' className='role' name='role'>
+                    <option>Please Select a Role</option>
+                    <option value='admin'>Administrator</option>
+                    <option value='member'>Member</option>
+                    <option value='leader'>Leader</option>
+                </Field>
                 <label className='checkbox-container'>
                     Terms of Service
-                    <Field type='checkbox' name='terms' checked={values.terms} />
+                    <Field className='terms-field' type='checkbox' name='terms' checked={values.terms} />
                     <span className='checkmark' />
                 </label>
                 <button type='submit'>Submit</button>
@@ -61,12 +83,13 @@ const FormComponent = ({ status }) => {
 
 const CopyUserForm = withFormik({
     //prop that handles state. values is an object
-    mapPropsToValues({ username, email, password, terms }) {
+    mapPropsToValues({ username, email, password, role, terms }) {
         //handles change, This object is passed into our map fxn with updated value
         return {
             username: username || '',
             email: email || '',
             password: password || '',
+            role: role || '',
             terms: terms || false
         };
     },
@@ -75,6 +98,7 @@ const CopyUserForm = withFormik({
         username: Yup.string().required('Invalid Username'),
         email: Yup.string().required('Invalid email'),
         password: Yup.string().required('Invalid password'),
+        role: Yup.string().required('Please select a role'),
         terms: Yup.bool().required('Must acknowledge terms of service')
     }),
     //prop that handles submit

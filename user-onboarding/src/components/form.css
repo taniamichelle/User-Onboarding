@@ -4,3 +4,27 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+.user-form {
+    display: flex;
+    flex-flow: column nowrap;
+    color: white;
+}
+
+.username-field {
+    border: 1px solid white;
+}
+
+.email-field {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.password-field {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.terms-field {
+    color: tan;
+}
