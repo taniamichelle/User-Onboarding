@@ -1,0 +1,58 @@
+body {
+    background-image: url('mountains.jpg');
+  background-attachment: scroll;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.user-form {
+    display: flex;
+    flex-flow: column nowrap;
+    color: white;
+}
+
+.username-field {
+    border: 1px solid white !important;
+    display: flex !important;
+    flex-flow: column nowrap !important;
+    width: 80% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.email-field {
+    border: 1px solid white !important;
+    display: flex !important;
+    flex-flow: column nowrap !important;
+    width: 80% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.password-field {
+    border: 1px solid white !important;
+    display: flex !important;
+    flex-flow: column nowrap !important;
+    width: 80% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.role-field {
+    margin-right: 2rem;
+    /* display: flex !important;
+    flex-flow: column nowrap !important;
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important; */
+}
+
+.terms-field {
+    margin: 2rem;
+    /* color: tan;
+    display: flex !important;
+    flex-flow: column wrap !important;
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important; */
+}
